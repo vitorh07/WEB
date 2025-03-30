@@ -1,0 +1,118 @@
+body{
+    background-color: #f3e5d8;
+    font-family: monospace;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box-conteudo{
+    margin-top: 5%;
+    width: 50%;
+    background-color: white;
+    border-radius: 2rem;
+    margin-bottom: 5%;
+}
+
+.box-conteudo img{
+    width: 100%;
+    height: 50%;
+    border-radius: 2rem;
+}
+
+.texto{
+    margin: 5%;
+}
+
+.texto h2{
+    font-size: 2rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.preparation{
+    background-color: #fff8fc;
+    padding: 20px;
+}
+
+.preparation h4{
+    color: #582038;
+    font-size: 1.3rem;
+}
+
+.texto h3{
+    color: #7f4f3a;
+    font-size: 1.5rem;
+}
+
+li::marker{
+    color: #7f4f3a;
+}
+
+li{
+    padding: 4px;
+}
+
+.dstq{
+    color: #5c5654;
+    font-weight: bold;
+}
+
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    gap: 8px;
+}
+    
+
+
+.div3 {
+    grid-column: span 2 / span 2;
+}
+
+.div4 {
+    grid-row-start: 3;
+}
+
+.div5 {
+    grid-row-start: 3;
+}
+
+.div6 {
+    grid-column: span 2 / span 2;
+}
+
+.div7 {
+    grid-row-start: 5;
+}
+
+.div8 {
+    grid-row-start: 5;
+}
+
+.div9 {
+    grid-column: span 2 / span 2;
+}
+
+.div10 {
+    grid-row-start: 7;
+}
+
+.div11 {
+    grid-row-start: 7;
+}
+
+.div2, .div5, .div8, .div11{
+    color: #836256;
+    font-weight:1000;
+}
+
+.div1, .div4, .div7, .div10{
+    color: #83817f;
+    margin-left: 25px;
+}
+

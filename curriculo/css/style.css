@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+}
+
+body{
+    background-color: #777 !important;
+}
+
+
+#container-menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 15vh;
+    width: 100%;
+    background-color: #333;
+}
+
+#container-menu nav ul{
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+}
+
+#container-menu nav ul li{
+    list-style: none;
+    margin-top: 2rem;
+}
+
+#container-menu nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+.container-conteudo{
+    width: 100%;
+    background-color: #777;
+}
+
+.container-conteudo .topo-conteudo{
+    height: 15vh;
+    background-color: #777;
+}
+
+.container-conteudo .flex-conteudo{
+    width: 100%;
+    height: 85%;
+    display: flex;
+    align-items: center;
+}
+
+.conteudo-left, .conteudo-right{
+    height: 50%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+h3{
+    font-size: 1.5rem;
+}
+
+h2{
+    font-size: 1.7rem
+}
+
+.box-conteudo{
+    margin-top: 2rem;
+    height: 27rem;
+    background-color: #999;
+    width: 75%;
+    border-radius: 10%;
+}
+
+.box-conteudo .texto-conteudo{
+    text-align: left;
+    margin: 10% 5% 5% 5%;
+    display: flex;
+    flex-direction: column;
+}
+
+.box-conteudo h3{
+    text-align: center;
+    padding-top: 5%;
+}
+
+
+.conteudo-right p {
+    word-wrap: break-word; 
+    word-break: break-word; 
+    overflow-wrap: break-word;
+}
+
+
+.box-conteudo p a{
+    text-decoration: none;
+    color: black;
+}
+
+.habilidades-tec li{
+    list-style: none;
+    padding: 1.5%;
+}
+
+.tec-h1{
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+.habilidades-tec a{
+    text-decoration: none;
+    color: black;
+}
