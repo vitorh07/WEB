@@ -1,0 +1,14 @@
+.carousel-inner img {
+    max-height: 90vh;
+    object-fit: cover;
+}
+
+i{
+    margin-left: 5%;
+    padding: 2%;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
