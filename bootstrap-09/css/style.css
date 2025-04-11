@@ -1,0 +1,43 @@
+body{
+    margin: 0;
+}
+
+.carousel-inner img {
+    max-height: 90vh;
+    object-fit: cover;
+}
+
+#scrollspyHeading5{
+    color: #FFF;
+    background-color: #1F1F1F;
+}
+
+#scrollspyHeading4{
+    height: 150vh;
+    width: 99vw;
+}
+
+#navbar-example2{
+    background-color: #1F1F1F;
+}
+
+#navbar-example2{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+}
+
+nav img{
+    width: 125px;
+}
+
+i{
+    margin-left: 5%;
+    padding: 2%;
+}
+
+a{
+    text-decoration: none;
+}
+
