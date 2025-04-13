@@ -1,5 +1,6 @@
 body{
     margin: 0;
+    padding: 0;
 }
 
 .carousel-inner img {
@@ -7,12 +8,12 @@ body{
     object-fit: cover;
 }
 
-#scrollspyHeading5{
+#footer{
     color: #FFF;
     background-color: #1F1F1F;
 }
 
-#scrollspyHeading4{
+#contato{
     height: 150vh;
     width: 99vw;
 }
@@ -26,6 +27,7 @@ body{
     top: 0;
     left: 0;
     width: 100vw;
+    z-index: 999;
 }
 
 nav img{
@@ -39,5 +41,15 @@ i{
 
 a{
     text-decoration: none;
+}
+
+.banner-img-container {
+    margin-top: 0;
+    padding: 0;
+}
+
+.banner-img {
+    width: 99.2vw;
+    height: 100vh;
 }
 
