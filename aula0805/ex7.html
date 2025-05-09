@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Encontrar o maior número de uma lista</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    input, button {
+      padding: 10px;
+      font-size: 16px;
+    }
+    #resultado {
+      margin-top: 20px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Encontrar o maior número de uma lista</h1>
+  <input type="text" id="numero" placeholder="Digite números separados por virgula" />
+  <button onclick="verificar()">Verificar</button>
+
+  <div id="resultado"></div>
+
+  <script>
+    function verificar() {
+      const num = document.getElementById("numero").value;
+      const nums = num.toString().split(",");
+      const resultado = document.getElementById("resultado");
+
+      if (nums.some(isNaN)) {
+        resultado.innerHTML = "Por favor, insira apenas números separados por vírgulas.";
+        return;
+      }
+
+      const maior = Math.max(...nums);
+      resultado.innerHTML = `O maior número é: ${maior}`;
+    }
+  </script>
+
+</body>
+</html>
+

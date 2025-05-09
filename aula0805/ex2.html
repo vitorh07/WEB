@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Calcular a média de 3 notas</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    input, button {
+      padding: 10px;
+      font-size: 16px;
+    }
+    #resultado {
+      margin-top: 20px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Calcular a média de 3 notas</h1>
+  <input type="text" id="n1" placeholder="Digite nota 1" />
+  <input type="text" id="n2" placeholder="Digite nota 2" />
+  <input type="text" id="n3" placeholder="Digite nota 3" />
+  <button onclick="verificar()">Verificar</button>
+
+  <div id="resultado"></div>
+
+  <script>
+    function verificar() {
+      const n1 = parseFloat(document.getElementById("n1").value);
+      const n2 = parseFloat(document.getElementById("n2").value);
+      const n3 = parseFloat(document.getElementById("n3").value);
+      const media = (n1 + n2 + n3) / 3;
+      const resultado = document.getElementById("resultado");
+
+      if (isNaN(n1, n2, n3)) {
+        resultado.textContent = "Por favor, digite um número válido.";
+        return;
+      }
+
+      if (media >= 6) {
+        resultado.textContent = `Aprovado! Média: ${media}`;
+      } else {
+        resultado.textContent = `Reprovado! Média: ${media}`;
+      }
+    }
+  </script>
+
+</body>
+</html>
+
