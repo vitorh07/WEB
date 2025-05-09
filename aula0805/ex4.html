@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Contar de 1 até 100 (ou até N)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    input,
+    button {
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    #resultado {
+      margin-top: 20px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Contar de 1 até 100 (ou até N)</h1>
+  <input type="text" id="num" placeholder="Digite um número" />
+  <input type="text" id="limite" placeholder="Digite o limite" />
+  <button onclick="verificar()">Verificar</button>
+
+  <div id="resultado"></div>
+
+  <script>
+    function verificar() {
+      const num = parseInt(document.getElementById("num").value);
+      const limite = parseInt(document.getElementById("limite").value);
+      const resultado = document.getElementById("resultado");
+
+      if (isNaN(num, limite)) {
+        resultado.textContent = "Por favor, digite um número válido.";
+        return;
+      }
+
+      if (limite > num) {
+        for (let i = num; i <= limite; i++) {
+          resultado.innerHTML += `<br>${i}`;
+        }
+      } else {
+        resultado.textContent = "O limite deve ser maior que o número.";
+      }
+    }
+
+  </script>
+
+</body>
+
+</html>
