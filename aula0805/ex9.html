@@ -1,22 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
   <meta charset="UTF-8">
-  <title>Verificar se um número é primo</title>
+  <title>Fibonacci até N termos</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       text-align: center;
       margin-top: 50px;
     }
-
-    input,
-    button {
+    input, button {
       padding: 10px;
       font-size: 16px;
     }
-
     #resultado {
       margin-top: 20px;
       font-size: 20px;
@@ -24,10 +20,9 @@
     }
   </style>
 </head>
-
 <body>
 
-  <h1>Verificar se um número é primo</h1>
+  <h1>Fibonacci até N termos</h1>
   <input type="text" id="numero" placeholder="Digite um número" />
   <button onclick="verificar()">Verificar</button>
 
@@ -43,22 +38,14 @@
         return;
       }
 
-      if (num < 2) {
-        resultado.textContent = `O número ${num} não é primo.`;
-        return;
+      if (num % 2 === 0) {
+        resultado.textContent = `O número ${num} é PAR.`;
+      } else {
+        resultado.textContent = `O número ${num} é ÍMPAR.`;
       }
-
-      for (let i = 2; i <= Math.sqrt(num); i++) {
-        if (num % i === 0) {
-          resultado.textContent = `O número ${num} não é primo.`;
-          return;
-        }
-      }
-
-      resultado.textContent = `O número ${num} é primo!`;
     }
   </script>
 
 </body>
-
 </html>
+
