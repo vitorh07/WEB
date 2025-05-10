@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <title>Somar números até o usuário digitar 0</title>
@@ -9,10 +10,13 @@
       text-align: center;
       margin-top: 50px;
     }
-    input, button {
+
+    input,
+    button {
       padding: 10px;
       font-size: 16px;
     }
+
     #resultado {
       margin-top: 20px;
       font-size: 20px;
@@ -20,6 +24,7 @@
     }
   </style>
 </head>
+
 <body>
 
   <h1>Somar números até o usuário digitar 0</h1>
@@ -29,6 +34,8 @@
   <div id="resultado"></div>
 
   <script>
+    let soma = 0;
+
     function verificar() {
       const num = parseInt(document.getElementById("numero").value);
       const resultado = document.getElementById("resultado");
@@ -38,14 +45,19 @@
         return;
       }
 
-      if (num % 2 === 0) {
-        resultado.textContent = `O número ${num} é PAR.`;
-      } else {
-        resultado.textContent = `O número ${num} é ÍMPAR.`;
+      if (num === 0) {
+        resultado.textContent = `Soma final: ${soma}`;
+        soma = 0;
+        return;
       }
+
+      soma += num;
+      resultado.textContent = `Soma atual: ${soma}`;
+      document.getElementById("numero").value = '';
+      document.getElementById("numero").focus();
     }
   </script>
 
 </body>
-</html>
 
+</html>

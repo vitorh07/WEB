@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <title>Fibonacci até N termos</title>
@@ -9,10 +10,13 @@
       text-align: center;
       margin-top: 50px;
     }
-    input, button {
+
+    input,
+    button {
       padding: 10px;
       font-size: 16px;
     }
+
     #resultado {
       margin-top: 20px;
       font-size: 20px;
@@ -20,6 +24,7 @@
     }
   </style>
 </head>
+
 <body>
 
   <h1>Fibonacci até N termos</h1>
@@ -33,19 +38,20 @@
       const num = parseInt(document.getElementById("numero").value);
       const resultado = document.getElementById("resultado");
 
-      if (isNaN(num)) {
-        resultado.textContent = "Por favor, digite um número válido.";
+      if (isNaN(num) || num <= 0) {
+        resultado.textContent = "Por favor, digite um número válido maior que zero.";
         return;
       }
 
-      if (num % 2 === 0) {
-        resultado.textContent = `O número ${num} é PAR.`;
-      } else {
-        resultado.textContent = `O número ${num} é ÍMPAR.`;
+      let fib = [0, 1];
+      for (let i = 2; i < num; i++) {
+        fib.push(fib[i - 1] + fib[i - 2]);
       }
+
+      resultado.textContent = `${fib.slice(0, num).join(', ')}`;
     }
   </script>
 
 </body>
-</html>
 
+</html>

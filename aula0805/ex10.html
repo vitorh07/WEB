@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <title>Contar vogais de uma palavra</title>
@@ -9,10 +10,13 @@
       text-align: center;
       margin-top: 50px;
     }
-    input, button {
+
+    input,
+    button {
       padding: 10px;
       font-size: 16px;
     }
+
     #resultado {
       margin-top: 20px;
       font-size: 20px;
@@ -20,32 +24,32 @@
     }
   </style>
 </head>
+
 <body>
 
   <h1>Contar vogais de uma palavra</h1>
-  <input type="text" id="numero" placeholder="Digite um número" />
+  <input type="text" id="palavra" placeholder="Digite uma palavra" />
   <button onclick="verificar()">Verificar</button>
 
   <div id="resultado"></div>
 
   <script>
     function verificar() {
-      const num = parseInt(document.getElementById("numero").value);
+      const palavra = document.getElementById("palavra").value.toLowerCase();
       const resultado = document.getElementById("resultado");
 
-      if (isNaN(num)) {
-        resultado.textContent = "Por favor, digite um número válido.";
+      if (!palavra || !isNaN(palavra)) {
+        resultado.textContent = "Por favor, digite uma palavra válida.";
         return;
       }
 
-      if (num % 2 === 0) {
-        resultado.textContent = `O número ${num} é PAR.`;
-      } else {
-        resultado.textContent = `O número ${num} é ÍMPAR.`;
-      }
+      const vogais = palavra.match(/[aeiouáéíóúâêîôûãõ]/gi);
+      const quantidade = vogais ? vogais.length : 0;
+
+      resultado.textContent = `"${palavra}" contém ${quantidade} vogal(is).`;
     }
   </script>
 
 </body>
-</html>
 
+</html>
