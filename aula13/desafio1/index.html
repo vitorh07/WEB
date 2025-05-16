@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-DQvkBjpPgn7RC31MCQoOeC9TI2kdqa4+BSgNMNj8v77fdC77Kj5zpWFTJaaAoMbC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Desafio 01</title>
+    <style>
+        .sim{
+            color: rgb(0, 234, 0);
+            font-weight: 500;
+            font-size: 16px;
+        }
+
+        .nao{
+            color: rgb(234, 16, 0);
+            font-weight: 500;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body class="bg-dark d-flex justify-content-center align-items-center min-vh-100">
+
+    <form class="d-flex flex-column justify-content-center align-items-center bg-secondary p-5 rounded w-50 h-50">
+        <div class="mb-3 w-100 text-center">
+            <h2 class="text-light py-3">Verificador de Palíndromos</h2>
+            <input type="text" class="form-control" id="numero" placeholder="Digite um número inteiro">
+        </div>
+        <button type="submit" class="btn btn-primary w-100" onclick="verificar(event)">Verificar</button>
+        <div class="text-light py-2" id="resultado"></div>
+    </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YUe2LzesAfftltw+PEaao2tjU/QATaW/rOitAq67e0CT0Zi2VVRL0oC4+gAaeBKu"
+        crossorigin="anonymous"></script>
+
+    <script src="main.js"></script>
+</body>
+
+
+</html>
