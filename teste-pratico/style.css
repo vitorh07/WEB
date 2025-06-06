@@ -1,0 +1,27 @@
+#catalogo .card img{
+    width: 25%;
+    margin: 0 auto;
+}
+
+#catalogo .card{
+    height: 24rem;
+}
+
+#catalogo .card-body{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+@media (max-width: 550px) {
+    .d-flex{
+        margin: 0 auto;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .d-flex *{
+        margin-bottom: 10px;
+    }
+}
